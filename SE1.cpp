@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-
 int sum(int numbers[], int length){ //adds all the integers in an array
 	int temp = 0;
 	for(int i = 0; i < length; i++){

@@ -18,12 +18,26 @@ int product(int numbers[], int length) { //multiplies all the ints in an array
 
 	return temp;
 }
-
+void flip(int numbers[], int temp[], int length){
+	int j = 0;
+	for(int i = length; i >=0; i--){
+		temp[j] = numbers[i];
+		j--;
+	}
+}
 
 int main(){
 	int numbers[] = {1, 2, 3, 4};
+	int temp[sizeof(numbers) / sizeof(*numbers)];
 
 	cout << "Sum: " << sum(numbers, (sizeof(numbers) / sizeof(*numbers))) << endl;
 	cout << "Product: " << product(numbers, (sizeof(numbers) / sizeof(*numbers))) << endl;
+
+	cout << "Flip: " << endl;
+	for(int i = 0; i < (sizeof(numbers) / sizeof(*numbers)); i++){
+		cout << temp[i] << " ";
+	}
+	cout << endl;
+
 	return 0;
 }

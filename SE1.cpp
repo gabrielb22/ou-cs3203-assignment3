@@ -20,9 +20,9 @@ int product(int numbers[], int length) { //multiplies all the ints in an array
 }
 void flip(int numbers[], int temp[], int length){
 	int j = 0;
-	for(int i = length; i >=0; i--){
+	for(int i = length - 1; i >=0; i--){
 		temp[j] = numbers[i];
-		j--;
+		j++;
 	}
 }
 
@@ -34,6 +34,7 @@ int main(){
 	cout << "Product: " << product(numbers, (sizeof(numbers) / sizeof(*numbers))) << endl;
 
 	cout << "Flip: " << endl;
+	flip(numbers, temp, (sizeof(numbers) / sizeof(*numbers)));
 	for(int i = 0; i < (sizeof(numbers) / sizeof(*numbers)); i++){
 		cout << temp[i] << " ";
 	}
@@ -41,3 +42,6 @@ int main(){
 
 	return 0;
 }
+
+
+
